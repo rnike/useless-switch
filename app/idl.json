@@ -1,0 +1,60 @@
+{
+  "version": "0.1.0",
+  "name": "useless_switch",
+  "instructions": [
+    {
+      "name": "init",
+      "accounts": [
+        {
+          "name": "switch",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "owner",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "toggle",
+      "accounts": [
+        {
+          "name": "switch",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Switch",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "state",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "8QB7HjktK1sbnnMnXBuMxo1BQpT5gcAUpcvhEmLEk9ED"
+  }
+}

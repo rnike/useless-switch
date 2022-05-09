@@ -1,0 +1,63 @@
+.container {
+  border-radius: 8px;
+  background-color: #eee;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.6),
+    inset 5px 0px 8px 2px rgba(0, 0, 0, 0.3),
+    inset -8px 5px 6px 5px rgba(255, 255, 255, 1);
+  height: 500px;
+  width: 300px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.border {
+  background-color: #f2f2f2;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.switch {
+  all: unset;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  position: relative;
+  margin: 4px 0 0 0;
+  height: 92px;
+  width: 70px;
+  transform: rotate3d(1, 0, 0, 15deg);
+  box-shadow: 0 -3px 1px -0.5px rgb(167, 167, 167, 0.6),
+    0 0 1px 0 rgb(0, 0, 0, 0.5);
+}
+
+.switch.on {
+  margin: 3px 0 0 0;
+  transform: rotate3d(-1, 0, 0, 15deg);
+  box-shadow: 0 3px 1px -0.5px rgb(167, 167, 167, 0.6),
+    0 0 1px 0 rgb(0, 0, 0, 0.5);
+}
+
+.switch::after {
+  content: '';
+  border-radius: 15px;
+  width: 18px;
+  height: 3px;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.switch.on::after {
+  background-color: rgb(88, 97, 86);
+}
+
+.switch.off::after {
+  background-color: rgb(255, 212, 93);
+  box-shadow: 0 0.2rem 0.3rem rgba(255, 236, 205, 0.7);
+  text-align: center;
+}
